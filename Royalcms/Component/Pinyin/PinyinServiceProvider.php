@@ -31,11 +31,10 @@ class PinyinServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->royalcms['pinyin'] = $this->royalcms->share(
-            function ($royalcms) {
-                return new Pinyin;
-            }
-        );
+        $this->royalcms->share('pinyin', function ($royalcms)
+        {
+            return new Pinyin;
+        });
 
         // Load the alias
         $this->loadAlias();
