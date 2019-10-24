@@ -26,7 +26,15 @@
 	"extra": {
         "branch-alias": {
             "dev-master": "5.0-dev"
-        }
+        },
+		"royalcms": {
+			"providers": [
+				"Royalcms\\Component\\Pinyin\\PinyinServiceProvider"
+			],
+			"aliases": {
+				"RC_Pinyin": "Royalcms\\Component\\Pinyin\\Facades\\Pinyin"
+			}
+		}
     },
 	"minimum-stability": "dev"
 }
